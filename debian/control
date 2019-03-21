@@ -1,0 +1,12 @@
+Source: ros-kinetic-rosbag-pandas
+Section: misc
+Priority: extra
+Maintainer: Rein Appeldoorn <rein@eurotec.nu>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-rosbag-pandas
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-matplotlib, python-numpy, python-pandas, ros-kinetic-rosbag, ros-kinetic-roslib, ros-kinetic-rospy-message-converter
+Description: Create a Pandas data frame from a ros bag file.
