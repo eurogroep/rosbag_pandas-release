@@ -1,0 +1,12 @@
+Source: ros-melodic-rosbag-pandas
+Section: misc
+Priority: extra
+Maintainer: Rein Appeldoorn <rein@eurotec.nu>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rosbag-pandas
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-matplotlib, python-numpy, python-pandas, ros-melodic-rosbag, ros-melodic-roslib, ros-melodic-rospy-message-converter
+Description: Create a Pandas data frame from a ros bag file.
