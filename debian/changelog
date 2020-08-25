@@ -1,0 +1,47 @@
+ros-noetic-rosbag-pandas (0.5.4-1focal) focal; urgency=high
+
+  * chore: Noetic compatibility
+  * chore: use dict.items() instead of iteritems()
+    iteritems was [removed in python3](https://wiki.python.org/moin/Python3.0#Built-In_Changes).
+    items() is working both on Python2 and Python3
+  * docs: removed extra round bracket
+  * Update .travis.yml
+  * Bag plot example in readme
+  * Bag plot image for doc
+  * Contributors: Rein Appeldoorn, Valerio Magnago
+
+ -- Rein Appeldoorn <rein@eurotec.nu>  Mon, 24 Aug 2020 22:00:00 -0000
+
+ros-noetic-rosbag-pandas (0.5.3-1focal) focal; urgency=high
+
+  * flatdict dep in package
+  * Contributors: Rein Appeldoorn
+
+ -- Rein Appeldoorn <rein@eurotec.nu>  Wed, 20 Mar 2019 23:00:00 -0000
+
+ros-noetic-rosbag-pandas (0.5.2-1focal) focal; urgency=high
+
+  * Update .travis.yml
+  * Update README.md
+  * only module import
+  * required arguments
+  * Contributors: Rein Appeldoorn
+
+ -- Rein Appeldoorn <rein@eurotec.nu>  Tue, 26 Feb 2019 23:00:00 -0000
+
+ros-noetic-rosbag-pandas (0.5.1-1focal) focal; urgency=high
+
+  * Refactor rosbag_pandas
+    - Support dynamic arrays
+    - Key pattern specification conform rostopic msgevalgen
+    - Renamed scripts (and fixed scripts)
+    - Added new unit test
+    - Cleanup package
+    - pep8 compliance
+    - Updated documentation README
+  * Fork from https://github.com/aktaylor08/RosbagPandas, see https://github.com/aktaylor08/RosbagPandas/issues/11
+  * Contributors: Adam Taylor, Felix, Low Kian Seong, Ramon Wijnands, Rein Appeldoorn, itsb, turtlebot
+
+ -- Rein Appeldoorn <rein@eurotec.nu>  Thu, 01 Nov 2018 23:00:00 -0000
+
+
