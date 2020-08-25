@@ -2,7 +2,7 @@
 
 import logging
 
-import flatdict
+from .flatdict import FlatterDict
 import numpy as np
 import pandas as pd
 import rosbag
@@ -65,7 +65,7 @@ def bag_to_dataframe(bag_name, include=None, exclude=None):
     data_dict = {}
     for idx, (topic, msg, t) in enumerate(bag.read_messages(topics=topics)):
         flattened_dict = _get_flattened_dictionary_from_ros_msg(msg)
-        for key, item in flattened_dict.iteritems():
+        for key, item in flattened_dict.items():
             data_key = topic + "/" + key
             if data_key not in data_dict:
                 if isinstance(item, float) or isinstance(item, int):
@@ -88,7 +88,7 @@ def _get_flattened_dictionary_from_ros_msg(msg):
     :param msg: ROS msg instance
     :return: Flattened dict
     """
-    return flatdict.FlatterDict(convert_ros_message_to_dictionary(msg), delimiter="/")
+    return FlatterDict(convert_ros_message_to_dictionary(msg), delimiter="/")
 
 
 def _get_filtered_topics(topics, include, exclude):

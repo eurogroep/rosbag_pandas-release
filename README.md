@@ -11,8 +11,8 @@ import rosbag_pandas
 
 # Convert a ROSBag to a dataframe
 df = rosbag_pandas.bag_to_dataframe('data/rosout.bag')
-df_exclude = rosbag_pandas.bag_to_dataframe('data/example.bag', exclude=['/scan']))
-df_include = rosbag_pandas.bag_to_dataframe('data/rosout.bag', include=['/rosout']))
+df_exclude = rosbag_pandas.bag_to_dataframe('data/example.bag', exclude=['/scan'])
+df_include = rosbag_pandas.bag_to_dataframe('data/rosout.bag', include=['/rosout'])
 
 # Select a dataframe key based on topic and (conform msgevalgen pattern http://docs.ros.org/api/rostopic/html/)
 print(df['/rosout/header/stamp/secs'].to_string())
@@ -73,6 +73,14 @@ optional arguments:
   -c, --combined        Graph them all on one
   -v, --verbose         Log verbose
 ```
+
+#### Example
+
+```
+bag_plot -b 2019-01-16-14-14-37.bag -k /cmd_vel/linear/x /cmd_vel/angular/z -c
+```
+
+![bag_plot](doc/bag_plot.png)
 
 ### bag_print
 

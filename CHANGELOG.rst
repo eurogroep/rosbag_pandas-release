@@ -2,6 +2,18 @@
 Changelog for package rosbag_pandas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.5.4 (2020-08-25)
+------------------
+* chore: Noetic compatibility
+* chore: use dict.items() instead of iteritems()
+  iteritems was [removed in python3](https://wiki.python.org/moin/Python3.0#Built-In_Changes).
+  items() is working both on Python2 and Python3
+* docs: removed extra round bracket
+* Update .travis.yml
+* Bag plot example in readme
+* Bag plot image for doc
+* Contributors: Rein Appeldoorn, Valerio Magnago
+
 0.5.3 (2019-03-21)
 ------------------
 * flatdict dep in package
